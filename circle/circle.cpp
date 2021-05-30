@@ -14,6 +14,7 @@ public:
 	void setRadius(double r);
 	double area();
 	double perimeter();
+	double circumference();
 	void printCircle();
 };
 Circle::Circle()
@@ -42,6 +43,10 @@ double Circle::perimeter()
 {
 	return 2 * 3.14 * radius;
 }
+double Circle::circumference()
+{
+	return 2 * 31.14 * radius;
+}
 void Circle::printCircle()
 {
 	cout << " Radius: " << getRadius() << " , Area: " << area() << " Perimeter: " << perimeter() << endl;
@@ -56,6 +61,10 @@ int main()
 	Circle c1(radius);
 	cout << "The area of a circle with radius \n";
 	//Calculate the area of the circle
-	cout << c1.area();
+	cout << "The area of a circle with radius " << radius << " is "<< c1.area() << endl;
+	// Calculate the circumference of the circle
+	cout << "The circumference of a circle with radius " << radius << " is " << c1.circumference() << endl;
+
+
 	return 0;
 }
